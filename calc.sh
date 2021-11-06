@@ -21,5 +21,45 @@ echo "Please enter the operation:"
 read selection
 echo "The operation entered was: $selection"
 # If the selection matches a supported operation, execute the operation.
+case $selection in 
+  "Add" | "add")   
+   echo "Please enter the first number"
+read first_number
+   echo "You entered: $first_number"
+   echo "Please enter the second number"
+read second_number
+   echo "You entered $second_number"
+   echo "Result :"
+expr $first_number + $second_number
+   ;;
+  "Subtract" | "subtract")
+   echo "Please enter the first number"
+read first_number
+   echo "You entered: $first_number"
+   echo "Please enter the second number"
+read second_number
+   echo "You entered $second_number"
+   echo "Result :"
+expr $first_number - $second_number
+   ;;
+   "Multiply" | "multiply")
+   echo "Please enter the first number"
+read first_number
+   echo "You entered: $first_number"
+   echo "Please enter the second number"
+read second_number
+   echo "You entered $second_number"
+   echo "Result:"
+expr $first_number \* $second_number
+   ;;
+  "Exit" | "exit")
+  echo "Goodbye see you soon.."
+  exit 0
+  ;;
 # If the selection does not match a support operation, display an error message.
+  *)
+  echo "Wrong input, please re-enter your operation."
+  ;;
+esac
+done
 # When the operation is complete, redisplay the menu.
