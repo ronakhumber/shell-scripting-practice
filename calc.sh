@@ -3,6 +3,7 @@
 # When the program is first loaded, display a greeting to the user.
 echo "Hello, this is Maysong Calculator. I simplify calculations for you."
 
+while true; do
 # Then, display a menu that outlines the possible operations:
   # Add
   # Subtract
@@ -17,7 +18,7 @@ echo "3 : Multiply"
   # Exit
 echo "4 : Exit"
 # Then, capture the user selection.
-echo "Please enter the operation:"
+echo "Please enter the operation name:"
 read selection
 echo "The operation entered was: $selection"
 # If the selection matches a supported operation, execute the operation.
